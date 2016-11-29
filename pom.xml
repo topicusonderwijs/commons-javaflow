@@ -45,18 +45,59 @@
     </contributor>
   </contributors>
 
-  <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/commons/sandbox/javaflow/trunk/</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/commons/sandbox/javaflow/trunk/</developerConnection>
-    <url>http://svn.apache.org/viewvc/commons/sandbox/javaflow/trunk/</url>
-  </scm>
+	<scm>
+		<url>https://github.com/topicusonderwijs/javaflow</url>
+		<connection>scm:git:git@github.com:topicusonderwijs/javaflow.git</connection>
+		<tag>HEAD</tag>
+	</scm>
 
-  <distributionManagement>
-    <site>
-      <id>website</id>
-      <url>scpexe://people.apache.org/www/commons.apache.org/sandbox/javaflow/</url>
-    </site>
-  </distributionManagement>
+	<repositories>
+		<repository>
+			<id>central</id>
+			<url>http://repo-onderwijs.topicus.local/artifactory/repo</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>snapshots</id>
+			<url>http://repo-onderwijs.topicus.local/artifactory/repo</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>central</id>
+			<url>http://repo-onderwijs.topicus.local/artifactory/plugins-releases</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>snapshots</id>
+			<url>http://repo-onderwijs.topicus.local/artifactory/plugins-snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<distributionManagement>
+		<repository>
+			<id>topicus-repo</id>
+			<name>topicus-repo.local-releases</name>
+			<url>http://repo-onderwijs.topicus.local/artifactory/libs-releases-local</url>
+			<uniqueVersion>false</uniqueVersion>
+		</repository>
+		<snapshotRepository>
+			<id>topicus-repo</id>
+			<url>http://repo-onderwijs.topicus.local/artifactory/libs-snapshots-local</url>
+			<uniqueVersion>false</uniqueVersion>
+		</snapshotRepository>
+	</distributionManagement>
 
   <dependencies>
     <dependency>
