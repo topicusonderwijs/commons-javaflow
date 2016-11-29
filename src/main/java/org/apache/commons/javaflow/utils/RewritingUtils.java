@@ -28,14 +28,14 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarInputStream;
 import java.util.jar.JarOutputStream;
 
-import org.apache.commons.javaflow.bytecode.transformation.asm.AsmClassTransformer;
 import org.apache.commons.javaflow.bytecode.transformation.ResourceTransformer;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.commons.javaflow.bytecode.transformation.asm.AsmClassTransformer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public final class RewritingUtils {
 
-    private final static Log log = LogFactory.getLog(RewritingUtils.class);
+    private final static Logger log = LoggerFactory.getLogger(RewritingUtils.class);
 
     public interface Matcher {
         boolean isMatching( final String name );
